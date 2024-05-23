@@ -1,0 +1,42 @@
+{% load static %}
+<h1 style="font-size: 50px;color: white ;">{{ city }}</h1>
+{% if wea_info %}
+    {% if wea_info.main == 'clouds' %}
+        <img style="height: 10rem;align-items: center;" src="{% static 'image/cloudy.png' %}" alt="{{ wea_info.description }}">
+    {% elif wea_info.main == 'rain' %}
+        <img style="height: 10rem;align-items: center;" src="{% static 'image/rainy.png' %}" alt="{{ wea_info.description }}">
+    {% elif wea_info.main == 'storm' %}
+        <img style="height: 10rem;align-items: center;" src="{% static 'image/stormy.png' %}" alt="{{ wea_info.description }}">
+    {% elif wea_info.main == 'haze' %}
+        <img style="height: 10rem;align-items: center;" src="{% static 'image/windy.png' %}" alt="{{ wea_info.description }}">
+    {% elif wea_info.main == 'mist' %}
+        <img style="height: 10rem;align-items: center;" src="{% static 'image/windy.png' %}" alt="{{ wea_info.description }}">
+    {% elif wea_info.main == 'clear' %}
+        <img style="height: 10rem;align-items: center;" src="{% static 'image/sunny.png' %}" alt="{{ wea_info.description }}">
+    {% elif wea_info.main == 'snow' %}
+        <img style="height: 10rem;align-items: center;" src="{% static 'image/snow.png' %}" alt="{{ wea_info.description }}">
+    {% elif wea_info.main == 'drizzle' %}
+        <img style="height: 10rem;align-items: center;" src="{% static 'image/drizzle.png' %}" alt="{{ wea_info.description }}">
+    {% endif %}
+
+    <h1 class="temperature weather" style="font-size: 40px;">{{ wea_info.temp }}</h1>
+    <p class="description weather" style="font-size: 20px;">{{ wea_info.description }}</p>
+    <div class="humidity-pressure" style="display: flex; padding-bottom: 10px; color: white;">
+        <div class="humidity" style="margin-right
+        : 20px; margin-left: 10px; display: flex;">
+            <p style="font-size: 20px; font-weight: bold;;"><span style="text-decoration:underline;">Humidity:</span> <span style="text-decoration: none; font-size: 18px;font-weight: bold;"> {{ wea_info.humidity }}%</span></p>
+        </div>
+        <div class="pressure">
+            <p style="font-size: 20px; font-weight: bold;;"><span style="text-decoration:underline;">Pressure:</span> <span style="text-decoration: none; font-size: 18px;font-weight: bold;"> {{ wea_info.pressure }}</span></p>
+            
+        </div>
+    </div>
+    <div class="humidity-pressure" style="display: flex; padding-bottom: 10px; color: white;">
+        <div class="humidity" style="margin-right
+        : 20px; margin-left: 10px; display: flex;">
+            <p style="font-size: 20px; font-weight: bold;;"><span style="text-decoration:underline;">Wind Speed:</span> <span style="text-decoration: none; font-size: 18px;font-weight: bold;"> {{ wea_info.wind_speed }}km/h</span></p>
+        </div>
+        
+    </div
+    
+{% endif %}

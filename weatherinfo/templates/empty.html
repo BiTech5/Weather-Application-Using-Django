@@ -1,0 +1,10 @@
+{% load static %}
+{% if wea_info %}
+
+        <img style="height: 12rem;align-items: center;" src="{% static 'image/error.png' %}" alt="{{ wea_info.description }}">
+        <div class="containe" style="align-items: center; color: white;">
+            <p>City name can not be empty!!</p>
+        </div>
+
+    
+{% endif %}
