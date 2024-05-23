@@ -65,5 +65,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 We welcome contributions to this project. If you have any improvements or suggestions, please fork the repository and submit a pull request.
 ---
-For seeing the result just flow the link given below:
+For seeing the result just follow the link given below:
 https://bikram22.pythonanywhere.com/
