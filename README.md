@@ -1,7 +1,8 @@
 
 # Django Weather Application
 
-This is a Django web application that retrieves and displays weather information for any location using a weather API. Users can search for a city to get current weather conditions, forecasts, and other relevant details.## Features
+This is a Django web application that retrieves and displays weather information for any location using a weather API. Users can search for a city to get current weather conditions, forecasts, and other relevant details.
+## Features
 
 - User-friendly interface for searching locations
 - Dynamic weather data retrieval using a weather API (replace with the specific API you're using, e.g., OpenWeatherMap)
